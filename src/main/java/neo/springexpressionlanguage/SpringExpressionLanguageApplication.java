@@ -19,7 +19,15 @@ public class SpringExpressionLanguageApplication {
 	}
 
 }
+@RestController
+class Controller {
 
+    @GetMapping("/")
+    public String greet(){
+        return "hello Neo!";
+    }
+
+}
 @Component("uuid")
 class UuidService {
 	public String buildUuid() {
